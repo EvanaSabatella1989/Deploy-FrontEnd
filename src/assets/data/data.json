@@ -1,0 +1,143 @@
+{
+    "title": "Argentina Programa #Yo Programo",
+        "logo": "./assets/images/logo.jpg",
+    
+        "data": {
+            "name": "Evana Sabatella",
+            "backImage": "./assets/images/fondo.jpg",
+            "image": "./assets/images/foto.jpg",
+            "position": "Full Stack Developer Jr",
+            "ubication": "Corrientes(Argentina)",
+            "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, esse, ipsa rerum ad dolorem"
+        },
+        "experience": [{
+                    "position": "Front End Developer",
+                    "img": "./assets/images/makingsense.jpg",
+                    "mode": "Jornada Parcial",
+                    "start": "Marzo 2021",
+                    "end": "Febrero 2020",
+                    "timeElapsed": "11 meses",
+                    "ubication": "Colombia"
+                },
+                {
+                    "position": "Front End Developer",
+                    "img": "./assets/images/makingsense.jpg",
+                    "mode": "Jornada Completa",
+                    "start": "Abril 2020",
+                    "end": "Junio 2021",
+                    "timeElapsed": "1 año y 2 meses",
+                    "ubication": "Mexico"
+                }
+            ],
+            "education": [{
+                    "study": "Full Stack Developer",
+                    "img": "./assets/images/logo.jpg",
+                    "company": "Argentina Programa",
+                    "start": "Marzo 2022",
+                    "end": "Enero 2023",
+                    "timeElapsed": "10 meses"
+                },
+                {
+                    "study": "Full Stack Developer",
+                    "img": "./assets/images/alura.jpg",
+                    "company": "One Oracle Alura Latam",
+                    "start": "Febrero 2022",
+                    "end": "Diciembre 2022",
+                    "timeElapsed": "11 meses"
+                },
+                {
+                    "study": "Tecnico Superior en desarrollo Web y Aplicaciones digitales",
+                    "img": "./assets/images/ispc.png",
+                    "company": "ISPC",
+                    "start": "Marzo 2022",
+                    "end": "Enero 2024",
+                    "timeElapsed": "28 meses"
+                },
+                {
+                    "study": "Full Stack Developer Python",
+                    "img": "./assets/images/codo.jpg",
+                    "company": "Agencia de Aprendizaje a lo largo de la vida",
+                    "start": "Marzo 2021",
+                    "end": "Agosto 2021",
+                    "timeElapsed": "6 meses"
+                }
+            ],
+            "skills": {
+                "title":"HardSkills & SoftSkills",
+
+                "hardskills": {
+                    "name":"Hard Skills",
+                    "list" :[
+                    
+                    {
+
+                        "lenguage": "HTML",
+                        "progress": "100%"
+                    },
+                    {
+                        "lenguage": "CSS",
+                        "progress": "80%"
+                    },
+                    {
+                        "lenguage": "JavaScript",
+                        "progress": "70%"
+                    },
+                    {
+                        "lenguage": "Java",
+                        "progress": "70%"
+                    },
+                    {
+                        "lenguage": "MySQL",
+                        "progress": "60%"
+    
+                    }
+                ]
+                   
+                }
+                    ,
+    
+                "softskills": {
+                    "name":"Soft Skills",
+
+                    "list":[{
+                        "name": "Resolución de Problemas Complejos",
+                        "progress": "70%"
+                    },
+                    {
+                        "name": "Pensamiento Crítico",
+                        "progress": "80%"
+                    },
+                    {
+                        "name": "Creatividad",
+                        "progress": "80%"
+                    },
+                    {
+                        "name": "Gestión de Personas",
+                        "progress": "80%"
+                    },
+                    {
+                        "name": "Coordinación en equipo",
+                        "progress": "90%"
+                    }
+                ]
+                }
+            
+        },
+        "projects":[
+            {
+                "image": "./assets/images/portfolio.png",
+                "description": "Aplicación web full stack, que muestra misdatos personales, estudios cursados, experiencia laboral, conocimiento de las tecnologías y demas. Es una aplicación de arquitectura distribuida y conteniene un diseño de interfaz de usuario (front end) que muestra la información, una base de datos que almacena los datos antes mencionados y cuenta con las APIs necesarias para proveer a través de internet la información (back end).",
+                "link": "https://github.com/EvanaSabatella1989/Yo-Programo-Front-End"
+            },
+            {
+                "image":"./assets/images/Mind.png",
+                "description":"Pagina Web de un Gym desarrollado en el 2021. El proyecto contiene etiquetas semanticas para estructurar el sitio de forma correcta, un formulario de contacto con validacion mediante JavaScript. Ademas se utilizaron iframes, iconos de FontAwesome y fuentes tanto locales como de Google Fonts. El proyecto es totalmente responsivo, con 3 puntos de corte para 3 tamaños de dispositivos(PC escritorio, Tablet, Celular)",
+                "link": "https://evanasabatella1989.github.io/Proyecto-Mind-and-Body/"
+            },
+            {
+                "image":"./assets/images/AppDjango.jpg",
+                "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi maiores nulla a soluta dignissimos, eaque, obcaecati assumenda consequatur sunt nesciunt expedita nostrum dolorem natus earum. Velit dicta quas labore eius?",
+                "link": "https://github.com/EvanaSabatella1989/Proyecto-Django"
+            }
+        ]
+    }

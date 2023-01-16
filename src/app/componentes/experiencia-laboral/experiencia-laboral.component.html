@@ -1,0 +1,58 @@
+<!-- <div class="container-fluid">
+    <div class="card mat-card">
+        <h1 class="experiencia">Experiencia Laboral</h1>
+        <ul>
+            <li *ngFor="let experiencia of experienciaList">
+                <div class="row">
+                    <div class="col-sm-4"><img class="logos" [src]="experiencia.img" alt=""></div>
+                    <div class="col-sm-6">
+                        <h2>{{experiencia.position}}</h2>
+                        <h3>{{experiencia.mode}}</h3>
+                        <p>{{experiencia.start}} - {{experiencia.end}} - {{experiencia.timeElapsed}}</p>
+                        <p>{{experiencia.ubication}}</p>
+                    </div>
+                    <div class="col-sm-2 botones">
+                        <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
+                        <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a></div>
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
+    </div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="card mat-card">
+        <h1 class="experiencia">Experiencia Laboral</h1>
+        <div class="col-lg-4">
+            <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">Nueva
+                Experiencia</button>
+        </div>
+        <ul>
+            <li *ngFor="let ex of expe">
+                <div class="row">
+                    <div class="col-sm-4"><img class="logos" [src]="ex.imgE" alt="imagen"></div>
+                    <div class="col-sm-6">
+                        <h2>{{ex.nombreE}}</h2>
+                        <p>{{ex.descripcionE}}</p>
+                    </div>
+                    <div class="col-sm-2 botones" *ngIf="isLogged">
+
+                        <button type="button" class="btn btn-light" routerLink="/editexp/{{ex.id}}"><i
+                                class="bi bi-pencil-fill"></i></button>
+
+                        <button type="button" class="btn btn-light" (click)="delete(ex.id)"><i
+                                class="bi bi-trash-fill"></i></button>
+
+                    </div>
+                </div>
+                <br>
+            </li>
+        </ul>
+
+
+    </div>
+</div>

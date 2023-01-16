@@ -1,0 +1,67 @@
+<div class="container-fluid">
+    <div class="card mat-card">
+        <h1 class="skills">{{habilidades.title}}</h1>
+
+
+
+        <div class="container">
+            <h2 class="hard">{{habilidadesDuras.name}}</h2>
+            <ul>
+                <li *ngFor="let habilidadD of habilidadesDuras.list">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <h3 class="skill">{{habilidadD.lenguage}}</h3>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                    aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                    [ngStyle]="{'width':habilidadD.progress}">
+                                    {{habilidadD.progress}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 botones">
+                            <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
+                            <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a></div>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+
+
+
+
+
+            <h2 class="soft">{{habilidadesBlandas.name}}</h2>
+            <div class="container">
+                <ul>
+                    <li *ngFor="let habilidadB of habilidadesBlandas.list">
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h3 class="skill">{{habilidadB.name}}</h3>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                        [ngStyle]="{'width':habilidadB.progress}">
+                                        {{habilidadB.progress}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 botones">
+                                <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
+                                <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
