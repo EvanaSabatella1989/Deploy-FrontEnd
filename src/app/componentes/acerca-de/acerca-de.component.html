@@ -1,38 +1,35 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
 
     <div class="card mat-card">
-        <!-- <div id="profile-background" class="banner"><img class="back" [src]="acercaDe.backImage" alt=""></div> -->
-        <div id="profile-background" class="banner"><img class="back" src="./assets/images/fondo.jpg" alt=""></div>
+        <div id="profile-background" class="banner"><img class="back" [src]="acercaDe.backImage" alt=""></div>
+        
         <div id="info" style="padding: 16px">
             <div id="info-img">
                 <img class="profile-image" [src]="persona.img" alt="">
-                <!-- <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div> -->
-                <div class="btn-edit" *ngIf="isLogged"><a href="#" class="btn-right"><i
-                            class="bi bi-pencil-fill"></i></a></div>
+                <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
+                
             </div>
             <div id="info-data" class="row">
                 <div class="col-sm-4 datos">
-                    <!-- <h1 class="nombre">{{acercaDe.name}}</h1> -->
-                    <h1 class="nombre">{{persona.nombre}} {{persona.apellido}}</h1>
-                    <!-- <div id="info-company">{{acercaDe.position}}</div> -->
+                    <h1 class="nombre">{{acercaDe.name}}</h1>
+                    
+                    <div id="info-company">{{acercaDe.position}}</div>
                     <div id="info-contact">
-                        <!-- <span>{{acercaDe.ubication}}</span> -->
+                        <span>{{acercaDe.ubication}}</span>
 
                     </div>
-                    <!-- <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div> -->
-                    <div class="btn-edit" *ngIf="isLogged"><a href="#" class="btn-right"><i
-                                class="bi bi-pencil-fill"></i></a></div>
+                    <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
+                    
                 </div>
                 <div id="info-details" class="col-sm-6">
-                    <!-- <p>{{acercaDe.about}}</p> -->
+                    <p>{{acercaDe.about}}</p>
 
                 </div>
                 <div class="col-sm-2 botones">
-                    <!-- <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div> -->
-                    <div class="btn-edit" *ngIf="isLogged"><a href="#" class="btn-rigth"><i
-                                class="bi bi-pencil-fill"></i></a></div>
+                    <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
+                    
 
-                    <!-- <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a> -->
+                    <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a>
 
 
                 </div>
@@ -42,4 +39,59 @@
         </div>
 
     </div>
-</div>
+</div>  -->
+
+<div class="container-fluid">
+
+    <div class="card mat-card">
+
+        <div id="profile-background" class="banner"><img class="back" src="./assets/images/fondo.jpg" alt=""></div>
+        <div id="info" style="padding: 16px">
+            <div id="info-img">
+                <img class="profile-image" src="{{persona?.img}}" alt="">
+                <!-- <img class="profile-image" [src]=persona.img alt=""> -->
+
+                <!-- <div class="btn-edit" *ngIf="isLogged"><a href="#" class="btn-right"><i
+                            class="bi bi-pencil-fill"></i></a></div> -->
+            </div>
+            <div id="info-data" class="row">
+                <div class="col-sm-4 datos">
+
+                    <h1 class="nombre">{{persona?.nombre}}{{persona?.apellido}}</h1>
+
+                    <div id="info-company">{{persona?.profesion}}</div>
+
+                    <div id="info-contact">
+                        <!-- <span>{{acercaDe.ubication}}</span> -->
+                        {{persona?.ubicacion}}
+
+                    </div>
+
+                    <!-- <div class="btn-edit" *ngIf="isLogged"><a href="#" class="btn-right"><i
+                                class="bi bi-pencil-fill"></i></a></div>
+                </div> -->
+                </div>
+                <div id="info-details" class="col-sm-6">
+                    {{persona?.descripcion}}
+
+                </div>
+                <div class="col-sm-2 botones">
+
+                    <!-- <div class="btn-edit" *ngIf="isLogged"><a href="#" class="btn-rigth"><i
+                                    class="bi bi-pencil-fill"></i></a></div> -->
+
+                    <button type="button" *ngIf="isLogged" class="btn btn-light"
+                        routerLink="/editacercade/{{persona?.id}}"><i class="bi bi-pencil-fill"></i></button>
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>

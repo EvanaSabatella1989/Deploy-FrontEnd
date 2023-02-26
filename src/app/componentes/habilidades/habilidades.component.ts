@@ -1,22 +1,58 @@
 import { Component, OnInit } from '@angular/core';
+import { Skill } from 'src/app/model/skill';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { SkillService } from 'src/app/servicios/skill.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-habilidades',
   templateUrl: './habilidades.component.html',
   styleUrls: ['./habilidades.component.css']
 })
-export class HabilidadesComponent implements OnInit {
-  habilidades:any;
-  habilidadesDuras:any;
-  habilidadesBlandas:any;
-  constructor(private datosPorfolio:PorfolioService) { }
+// export class HabilidadesComponent implements OnInit {
+//   habilidades:any;
+//   habilidadesDuras:any;
+//   habilidadesBlandas:any;
+//   constructor(private datosPorfolio:PorfolioService) { }
 
+//   ngOnInit(): void {
+//     this.datosPorfolio.obtenerDatos().subscribe(data=>{
+//       this.habilidades=data.skills;
+//       this.habilidadesDuras=data.skills.hardskills;
+//       this.habilidadesBlandas=data.skills.softskills;
+//     })
+//   }
+// }
+
+export class HabilidadesComponent implements OnInit {
+  skills: Skill[] = [];
+
+  constructor(private skillS:SkillService, private tokenService: TokenService) { }
+  isLogged = false;
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data=>{
-      this.habilidades=data.skills;
-      this.habilidadesDuras=data.skills.hardskills;
-      this.habilidadesBlandas=data.skills.softskills;
-    })
+    this.cargarSkills();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
+  }
+
+  cargarSkills(): void{
+    this.skillS.lista().subscribe(
+      data => {this.skills = data}
+    );
+  }
+
+  delete(id?: number){
+    if(id != undefined){
+      this.skillS.delete(id).subscribe(
+        data => {
+          this.cargarSkills();
+        }, err => {
+          alert("No se pudo borrar la habilidad");
+        }
+      )
+    }
   }
 }

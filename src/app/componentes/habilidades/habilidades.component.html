@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="card mat-card">
         <h1 class="skills">{{habilidades.title}}</h1>
 
@@ -62,6 +62,86 @@
 
 
             </div>
+
+        </div>
+    </div> -->
+
+<div class="container-fluid">
+    <div class="card mat-card">
+        <h1 class="skills">Skills</h1>
+
+
+
+        <div class="container">
+            <!-- <h2 class="hard">HardSkills</h2> -->
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-light" routerLink="/nuevaskill" *ngIf="isLogged">+</button>
+            </div>
+            <ul>
+                <li *ngFor="let skill of skills">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <h3 class="skill">{{skill.nombre}}</h3>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                    aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                    [style.width]="(skill.porcentaje) + '%'">
+                                    {{skill.porcentaje}}%
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                        <div class="col-sm-2 botones" *ngIf="isLogged">
+
+                            <button type="button" class="btn btn-light" routerLink="/editskill/{{skill.id}}"><i
+                                    class="bi bi-pencil-fill"></i></button>
+
+                            <button type="button" class="btn btn-light" (click)="delete(skill.id)"><i
+                                    class="bi bi-trash-fill"></i></button>
+
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+
+
+
+
+
+
+            <!-- <h2 class="soft">SoftSkills</h2>
+                <div class="container">
+                    <ul>
+                        <li *ngFor="let habilidadB of habilidadesBlandas.list">
+                            <div class="row">
+                                <div class="col-sm-10">
+                                    <h3 class="skill">{{habilidadB.name}}</h3>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                            [ngStyle]="{'width':habilidadB.progress}">
+                                            {{habilidadB.progress}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 botones">
+                                    <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
+                                    <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+    
+    
+    
+    
+                </div> -->
 
         </div>
     </div>

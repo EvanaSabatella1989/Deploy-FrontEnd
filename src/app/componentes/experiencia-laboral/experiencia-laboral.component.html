@@ -28,8 +28,7 @@
     <div class="card mat-card">
         <h1 class="experiencia">Experiencia Laboral</h1>
         <div class="col-lg-4">
-            <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">Nueva
-                Experiencia</button>
+            <button type="button" class="btn btn-light" routerLink="/nuevaexp" *ngIf="isLogged">+</button>
         </div>
         <ul>
             <li *ngFor="let ex of expe">

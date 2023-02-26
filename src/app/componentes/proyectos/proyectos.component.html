@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="card mat-card">
         <h1 class="proyectos">Proyectos Funcionando!!!</h1>
         <div class="container">
@@ -19,6 +19,40 @@
                         <div class="btn-delete">
                             <a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="card mat-card">
+        <h1 class="proyectos">Proyectos</h1>
+        <!-- <div class="col-lg-4"> -->
+        <div>
+            <button type="button" class="btn btn-light" routerLink="/nuevoproyecto" *ngIf="isLogged">+</button>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" *ngFor="let proyecto of proyectos">
+                    <div class="thumbnail">
+                        <a [href]="proyecto.nombre" target="_blank">
+                            <img [src]="proyecto.img" alt="Lights" style="width:100%" />
+                            <div class="caption">
+                                <!-- <div> -->
+                                <p>{{proyecto.descripcion}}</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-2 botones" *ngIf="isLogged">
+
+                        <button type="button" class="btn btn-light" routerLink="/editproyecto/{{proyecto.id}}"><i
+                                class="bi bi-pencil-fill"></i></button>
+
+                        <button type="button" class="btn btn-light" (click)="delete(proyecto.id)"><i
+                                class="bi bi-trash-fill"></i></button>
+
                     </div>
                 </div>
             </div>
